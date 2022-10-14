@@ -20,3 +20,6 @@ setup.py
 
 # Jupyter launcher
 # JupyterLauncher.bat
+
+# data
+data/*
