@@ -1,4 +1,6 @@
-from scripts.main import NewData
+import pandas as pd
+
+from scripts.main import NewData, Data
 
 
 def test_initialize_new_data():
@@ -9,3 +11,18 @@ def test_initialize_new_data():
 
     assert new_data.date == my_date
     assert new_data.temperature == my_temp
+
+def test_initialize_data():
+    my_filename = "test_data.csv"
+    my_data = Data(filename=my_filename)
+
+    assert my_data.filename == my_filename
+
+def test_open_file():
+    correct_df = pd.DataFrame({"date": ["2022-10-01", "2022-10-02"],
+                               "temperature": [36.8, 37.2]})
+
+    my_filename = "../data/test_data.csv"
+    my_data = Data(filename=my_filename)
+
+    pd.testing.assert_frame_equal(my_data.open_file(), correct_df)
