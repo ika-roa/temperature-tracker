@@ -6,6 +6,9 @@ class NewData:
         self.date = date
         self.temperature = temperature
 
+    def __repr__(self):
+        return f"Temperature on {self.date}: {self.temperature} °C"
+
 
 if __name__ == "__main__":
     date = input("What is the date? ")
