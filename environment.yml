@@ -1,4 +1,5 @@
-name: my_test_project
+name: temperature-tracker
+
 channels:
   - defaults
   - conda-forge
@@ -12,9 +13,10 @@ dependencies:
   - ipython
   # VISUALIZATION
   - matplotlib
+  - plotly
   # OTHER TOOLS
   - pip:
-     - -e .  # install git checkout of my_test_project in editable mode
+     # - -e .  # install git checkout of my_test_project in editable mode
      # add here only pip-packages that are not available in conda/conda-forge!
 
   # DEVELOPMENT ONLY PACKAGES (could also be kept in a separate environment file)
