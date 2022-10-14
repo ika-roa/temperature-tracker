@@ -1,6 +1,6 @@
 #!/bin/bash
 
-env=finance
+env=temperature-tracker
 root=/home/stefanie/anaconda3
 
 source $root/bin/activate $env
